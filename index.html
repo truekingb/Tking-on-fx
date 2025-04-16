@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TKING’s Ultimate Forex Scalping Book</title>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      background-image: url('https://www.tradingview.com/x/placeholder/'); /* Placeholder for live chart */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    form {
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background: gold;
+      color: black;
+      font-weight: bold;
+    }
+    .payment-info, .contact-info {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>TKINGBEAST’s Ultimate Forex Scalping Book</h1>
+  <img src="cover.png" alt="Book Cover">
+
+  <form id="paymentForm">
+    <h2>Get the Book Now</h2>
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <select name="payment_method" required>
+      <option value="">Select Payment Method</option>
+      <option value="Binance">Binance</option>
+      <option value="BEP20">BEP20</option>
+      <option value="TRC20">TRC20</option>
+      <option value="APTOS">APTOS</option>
+    </select>
+    <button type="submit">Confirm Payment</button>
+  </form>
+
+  <div class="payment-info">
+    <h3>Payment Details</h3>
+    <p><strong>Binance:</strong> <a href="https://s.binance.com/y9FwAf6k" target="_blank">Click here to pay</a></p>
+    <p><strong>BEP20:</strong> 0xc273d209f900c4ad0a4e88d49f1561fdaea5d34d</p>
+    <p><strong>TRC20:</strong> TKxbgcPSJZcuTB139bNQd9xVSkJcQdDZ6c</p>
+    <p><strong>APTOS:</strong> 0xfe5b39a677bcc6cc770123c56218c34b97a0b9230855d98f375d54dac8142430</p>
+  </div>
+
+  <div class="contact-info">
+    <h3>Need Help?</h3>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/qr/BNVYAEZINDLAC" target="_blank">Chat Now</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/tking_beast?igsh=dmpqdmR5dzlkbTN1" target="_blank">@tking_beast</a></p>
+  </div>
+
+  <script>
+    (function() {
+      emailjs.init("lDyv2ZgELVIKtEHmc");
+    })();
+
+    document.getElementById("paymentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_d2nf8jz", "template_nu3w8at", this)
+        .then(function() {
+          alert("Payment confirmed! Check your email for the book link and password: Tking123@");
+        }, function(error) {
+          alert("Failed to send email: " + error);
+        });
+    });
+  </script>
+</body>
+</html>
